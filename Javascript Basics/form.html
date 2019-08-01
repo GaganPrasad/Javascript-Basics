@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script>
+        function validate()
+        {
+            var usr= document.getElementById("name");
+            var pwd= document.getElementById("pwd");
+            if(usr.value.trim()=="" || pwd.value.trim()=="")
+            {
+                alert("Input cannot be empty");
+                usr.style.border="solid 1px red";
+                pwd.style.border="solid 1px red";
+                return false;
+            }
+            else if(pwd.value.trim().length< 5)
+            {
+                alert("Password is short");
+                pwd.style.border="solid 1px red";
+                return false;
+            }
+            else
+                true;
+        }
+    </script>
+    <title>Form Validation</title>
+</head>
+<body>
+    <form onsubmit="return validate()" action="welcome.html">
+        <input type="text" id="name" placeholder="User Name">
+        <input type="password" id="pwd" placeholder="Password">
+        <br>
+        <button type="submit">Submit</button>
+
+    </form>
+</body>
+</html>

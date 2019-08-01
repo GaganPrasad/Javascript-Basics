@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>
+            Function
+        </title>
+        <script type="text/javascript">
+        
+            /*
+                Code block can be resued again and again
+            */
+
+            //Function definition without parameter
+            function add()
+            {
+                a= 5;
+                b=6;
+                sum= a+b;
+                document.write("Sum is: ", sum);
+            }
+
+            //Function definition with parameter
+            function add_con(a, b)
+            {
+                m= a+b;
+                document.write("<br>Addition is: ", m);
+            }
+
+            //Function definition with parameter and return
+            function re(a, b) 
+            {
+                m= a+b;
+                return m; // return value to the call
+            }
+            
+            //Function calls
+            add(); 
+            add_con(10, 20);
+            add_con("Gagan", " Prasad");
+
+            var res= re(20, 40); // value of m is stored in res
+            document.write("<br>Addition is: ", res);
+            
+           
+        </script>
+    </head>
+    <body>
+            
+    </body>
+</html>

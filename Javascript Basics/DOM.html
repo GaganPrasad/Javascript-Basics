@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>
+            DOM | Document Object Model
+        </title>
+        <script type="text/javascript">
+            function pressed()
+            {
+                //accessing elements using DOM
+                var str= document.getElementById("text").innerHTML;
+                // alert("The Button is Activated");
+                alert(str);
+            }
+        </script>
+    </head>
+    <body>
+           <button onclick="pressed()" style="padding: 0.5ch; border-radius: 5px" >Press</button> 
+           <h3 id="text">The Button is Activated and Ready to Use</h3>
+    </body>
+</html>

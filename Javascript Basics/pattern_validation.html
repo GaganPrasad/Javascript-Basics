@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script>
+        /*
+            \d - [0-9]
+            \w - [a-z A-Z 0-9 _]
+            \s - white space
+            \t - tab space
+        */
+        function validate()
+        {
+            var usr= document.getElementById("name").value;
+            var p=/^[0-9]{1}[A-Z]{2}[0-9]{2}[A-Z]{2}[0-9]{2}[1-9]$/;
+            if(p.test(usr))
+            {
+                // alert("Correct");
+                document.getElementById("lb").innerHTML="Valid";
+                document.getElementById("lb").style.visibility="visible";
+                document.getElementById("lb").style.color="green";
+            }
+            else
+            {
+                // alert("Incorrect");
+                document.getElementById("lb").innerHTML="Invalid";
+                document.getElementById("lb").style.visibility="visible";
+                document.getElementById("lb").style.color="red";
+            }
+        }
+    </script>
+    <title>Pattern Validation</title>
+</head>
+<body>
+    <form>
+        <input type="text" id="name" placeholder="User id">
+        <br>
+        <label id="lb" style=" color: red; visibility: hidden;">Invalid</label>
+        <br>
+        <button onclick="validate()" type="button">Submit</button>
+
+    </form>
+</body>
+</html>

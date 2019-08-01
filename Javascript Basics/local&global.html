@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>
+            Local and Global Variable
+        </title>
+        <script type="text/javascript">
+        
+            /*
+                Local Variable: accessed in the function where is it declared
+                Global Variable: accessed from anywehre in the program
+                
+            */
+            var g= "Global";//global variable
+            function localDemo()
+            {
+                var g= "Local";//local variable
+                document.write(g,"<br>");
+            }
+            localDemo();//for local variable
+            document.write(g);//for global variable
+        </script>
+    </head>
+    <body>
+            
+    </body>
+</html>

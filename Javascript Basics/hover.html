@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>
+            DOM | Mouse over and out
+        </title>
+        <script type="text/javascript">
+            function change()
+            {
+                document.getElementById("img1").src="image/2.png";
+                var v=document.getElementById("img1");
+                v.style.width="200px";
+            }
+            function back()
+            {
+                document.getElementById("img1").src="image/1.png";
+                var v=document.getElementById("img1");
+                v.style.width="300px";
+            }
+        </script>
+    </head>
+    <body>
+        <img onmouseover="change()" onmouseout="back()" src="image/1.png" alt="1" width="300px" id="img1">
+    </body>
+</html>

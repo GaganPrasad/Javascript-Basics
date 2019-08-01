@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script>
+        function validate()
+        {
+            var mail= document.getElementById("mail").value;
+            var no= document.getElementById("no").value;
+            var vno=/^[6-9]\d{9}$/;
+            var vmail= /^([a-zA-Z0-9\.-]+)@([a-z0-9-]+).([a-z]{2,10})(.[a-z]{2,10})?$/;
+            if(vno.test(no) && vmail.test(mail))
+            {
+                document.getElementById("lb").innerHTML="Valid";
+                document.getElementById("lb").style.visibility="visible";
+                document.getElementById("lb").style.color="green";
+            }
+            else
+            {
+                document.getElementById("lb").innerHTML="Invalid";
+                document.getElementById("lb").style.visibility="visible";
+                document.getElementById("lb").style.color="red";
+            }
+        }
+        
+    </script>
+    <title>No. and Mail Validation</title>
+</head>
+<body>
+    <form>
+        <input type="email" name="" id="mail" placeholder="xzy@examplemail.com">
+        <input type="text" id="no" placeholder="9066127177">
+        <br>
+        <label id="lb" style="color: red; visibility: hidden;">Invalid</label>
+        <br>
+        <button onclick="validate()" type="button">Validate</button> 
+    </form>
+</body>
+</html>

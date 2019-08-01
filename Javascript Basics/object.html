@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>
+            Object
+        </title>
+        <script type="text/javascript">
+            //type 1
+            var Student =
+            {
+                name : "Gagan",
+                age : 18,
+                dept : "ISE",
+                sD : function()
+                {
+                    document.write(Student.name," is ", Student.age, " and from ", Student.dept, "<br>");
+                }
+            }
+            Student.sD();//student object
+            document.write(Student.name);
+            /*
+
+                //type 2 using function
+                function teacher(name, age, dept)
+                {
+                    this.name = name;
+                    this.age = age;
+                    this.dept = dept;
+                    this.about = function()
+                    {
+                        document.write(this.name," is ", this.age, " and from ", this.dept, "<br>");
+                    }
+                }
+                var t1 = new teacher("<br>A", 24, "ISE");
+                var t2 = new teacher("B", 25, "CSE");
+                t1.about();
+                t2.about();
+                document.write(t1.dept);
+
+            */
+
+            //Adding more property in the object
+            Student.height= 6.1;
+            //Similarly methods can be added
+            Student.heightDetail= function()
+            {
+                document.write("<br>Height: ",Student.height);
+            }
+
+            Student.heightDetail();
+
+            //For deleting a property
+            delete Student.dept;
+            
+            //After deleting the dept property
+            document.write("<br>");
+            Student.sD();
+        </script>
+    </head>
+    <body>
+            
+    </body>
+</html>

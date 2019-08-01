@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery | Animation - Slide</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        button
+        {
+            margin: 1em 1em 0em 1em;
+            text-align: center;   
+            padding: 1ch;
+            border-radius: 5px;
+            border: 1px black solid;     
+            transition: all ease-in-out 100ms; 
+        }
+        button:hover
+        {
+            border: 1px gray solid; 
+            background: gray;
+        }
+        #content
+        {
+            margin-top: 1em;
+            border: 2px black solid;
+            padding: 1em;
+            text-align: justify;
+        }
+        #box
+        {
+            height: 100px;
+            width: 100px;
+            margin-top:1em; 
+            background: yellowgreen;
+            position: absolute;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <button type="button" id="hide">Hide</button>
+    <button type="button" id="show">Show</button>
+    <button type="button" id="toggle">Toggle</button>
+    <div id="content">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam illum id dolor ipsum at itaque labore recusandae maxime, quia ducimus quaerat quidem sed laborum necessitatibus minima voluptatibus suscipit, debitis odio?
+    </div>
+    <br>
+    <br>
+    <button type="button" id="animate">Animate</button>
+    <button type="button" id="animateb">Animate Back</button>
+    <div id="box">
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+
+            //Content display
+            $("#hide").click(function(){
+                $("#content").slideUp();
+            });
+
+            $("#show").click(function(){
+                $("#content").slideDown();
+            });
+
+            $("#toggle").click(function(){
+                //callback
+                $("#content").slideToggle(2000, function(){
+                    alert("Done");
+                });
+            });
+
+            //Animate Box
+            $("#animate").click(function(){
+                $("#box").animate({
+                    left: '50%',
+                    opacity: '1',
+                },200);
+            });
+            $("#animateb").click(function(){
+                $("#box").animate({
+                    left: '2%',
+                    opacity: '.5',
+                },200);
+            });
+        });
+    </script>
+        
+</body>
+</html>

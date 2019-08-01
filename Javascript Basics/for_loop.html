@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>
+            Control Statement | for loop
+        </title>
+        <script type="text/javascript">
+        
+            /*
+                Entry control loop condition is checked at beginning
+                Stntax
+                for(init; condition; increment/ decrement)
+                {
+                    body;
+                }
+            */
+            //Multiplication table of a number
+            var n = 9;
+            var i;
+            if(!isNaN(n))
+            {
+                document.write("Multiplication Table of ", n,":<br>");
+                for(i = 1; i<=10; i++)
+                {
+                    document.write(n, " X ", i, " = ", n*i, "<br>"); 
+                }
+            }
+            document.write("<br>"); 
+            //first n even number
+            if(!isNaN(n))
+            {
+                document.write("First ", n," Even number:<br>");
+                for(i = 2; i<=2*n; i+=2)
+                {
+                    document.write( i, "<br>"); 
+                }
+            }
+           
+        </script>
+    </head>
+    <body>
+            
+    </body>
+</html>

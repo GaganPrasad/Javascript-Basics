@@ -1,0 +1,1 @@
+document.write("Hello First Program JS from external file<br>");

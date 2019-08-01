@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>
+            DOM | Input from text box
+        </title>
+        <script type="text/javascript">
+            function change()
+            {
+                var usr = document.getElementById("text").value;
+                var pwd = document.getElementById("text1").value;
+                if(usr==pwd)
+                {
+                    alert("User name: "+usr + " Change password.");
+                } 
+                else
+                {
+                    alert("User name: "+usr + ", you ready to go.");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <input type="text" id="text" placeholder="Username"> 
+        <input type="password" id="text1" placeholder="Password">
+        <br>
+        <button onclick="change()">Click me</button>   
+    </body>
+</html>

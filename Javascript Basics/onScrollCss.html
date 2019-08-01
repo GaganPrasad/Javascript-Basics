@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Javascript | On Scroll Change CSS</title>
+    <!--In Document CSS -->
+    <style>
+        body
+        {
+            border: 5px solid #8000806e;
+            /* background-image:linear-gradient(to top, pink, white); */
+            font-family: Verdana, Geneva, Tahoma, sans-serif ;
+            padding: 1vw;
+            transition: all ease-in-out 500ms;
+        }
+        img{
+            border-radius: 5px;
+            margin: .1vh auto;
+        }
+        h1, h3{
+            font-weight: 600;
+        }
+        #landing{
+            height: 100vh;
+        }
+        #landing div{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        #landing div h1{
+            font-size: 9vw;
+            margin: 0%;
+        }
+        #landing div h4{
+            font-size: 6vw;
+            margin: 0%;
+            color: purple;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Dummy Content for scrollable screen -->
+    <section id="landing">
+        <div>
+            <h1>SCROLL</h1> 
+            <h4>CSS EFFECT</h4>
+            
+        </div>
+    </section>
+    <section style="text-align: center;">
+        <div style="position: relative;">
+            <img width= 85.5% src="https://wallpapercave.com/wp/wp3405517.jpg" alt="design">
+            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); color: white; font-size: 3vw">HTML | CSS | Javascript</div>
+        </div>
+    </section>
+    <section style="text-align: center;">
+        <div>
+            <img width= 28% src="https://wallpapercave.com/wp/wp3405517.jpg" alt="design">
+            <img width= 28% src="https://wallpapercave.com/wp/wp3405517.jpg" alt="design">
+            <img width= 28% src="https://wallpapercave.com/wp/wp3405517.jpg" alt="design">
+        </div>
+        <div>
+            <img width= 28% src="https://wallpapercave.com/wp/wp3405517.jpg" alt="design">
+            <img width= 28% src="https://wallpapercave.com/wp/wp3405517.jpg" alt="design">
+            <img width= 28% src="https://wallpapercave.com/wp/wp3405517.jpg" alt="design">
+        </div>
+        <div>
+            <img width= 28% src="https://wallpapercave.com/wp/wp3405517.jpg" alt="design">
+            <img width= 28% src="https://wallpapercave.com/wp/wp3405517.jpg" alt="design">
+            <img width= 28% src="https://wallpapercave.com/wp/wp3405517.jpg" alt="design">            
+        </div>
+    </section>
+
+    <script>
+        window.addEventListener("scroll", function(event){
+            var scroll= this.scrollY; // access scroll value
+            // console.log(scroll);
+            if(scroll > 100)
+            {
+                document.body.style.backgroundImage="linear-gradient(to top, pink, #8000806e)";
+            }
+            else
+            {
+                document.body.style.backgroundImage="linear-gradient(to top, white, white)";
+            }
+        });
+    </script>
+</body>
+</html>

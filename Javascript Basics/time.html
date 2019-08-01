@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Timing Function</title>
+    <script type="text/javascript">
+        var id=0;
+        function change()
+        {
+            document.getElementById("text").innerHTML="It took me 5 seconds";
+        }
+        function start()
+        {
+            id= window.setTimeout(change, 5000); //for only once
+        }
+        function stop()
+        {
+            window.clearTimeout(id);
+        }
+        
+        //Timer
+        var ID=0;
+        var sec=0;
+        function go()
+        {
+            document.getElementById("time").innerHTML= sec+" second";
+            sec++;
+        }
+        function play()
+        {
+            ID= window.setInterval(go, 1000); //calls after every 1 second
+        }
+        function pause()
+        {
+            window.clearInterval(ID);
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="Start" id="start" onclick="start()">
+    <h2 id="text">Click Start to change me</h2>
+    <input type="button" value="Stop" id="stop" onclick="stop()">
+    
+    <br><br><br>
+    <h2>Timer</h2>
+    <input type="button" value="Start" id="play" onclick="play()">
+    <h2 id="time">Click Start to change me</h2>
+    <input type="button" value="Stop" id="pause" onclick="pause()">
+</body>
+</html>

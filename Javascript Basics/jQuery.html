@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery | Animation</title>
+</head>
+
+<body>
+    <button type="button" id="btn">House Fade click</button>
+    <br><br>
+    <img src="image/1.png" width="200" id="img">
+    
+    
+    <br><br><br>
+    
+    <button type="button" id="btn1">Heart Fade</button>
+    <br><br>
+    <img src="image/3.png" width="200" id="img1">
+    
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+    <script>
+        /*
+            $("selector").action();
+        */
+       $(document).ready(function()
+       {
+           //house fade on click
+           $("#btn").click(fade);
+            function fade()
+            {  
+                $("#img").fadeToggle(1000);
+            }
+
+            //Heart fade on hover
+            $("#btn1").mouseenter(function(){
+                $("#img1").fadeOut();
+            })
+            $("#btn1").mouseleave(function(){
+                $("#img1").fadeIn();
+            })
+        });
+    </script>
+</body>
+</html>

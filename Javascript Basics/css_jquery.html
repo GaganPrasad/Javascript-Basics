@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery | CSS access</title>
+    <style>
+        body
+        {
+            text-align: center;
+        }
+        .box1
+        {
+            height: 150px;
+            width: 150px;
+            background: rgb(224, 39, 70);
+            transition: all ease-in-out 500ms;
+        }
+        .box2
+        {
+            height: 100px;
+            width: 100px;
+            background: rebeccapurple;
+            transition: all ease-in-out 500ms;
+        }
+        #content div
+        {
+            margin: 1em;
+            display: inline-block;
+        }
+        .modify
+        {
+            background: rgb(255, 147, 47);
+
+        }
+        .small
+        {
+            height: 100px;
+            width: 100px;
+        }
+        .big
+        {
+            height: 150px;
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+    <button type="button" id="btn1">Add Class</button>
+    <button type="button" id="btn2">Remove Class</button>
+    <button type="button" id="btn3">Toggle</button>
+    <button type="button" id="btn4">Change CSS</button>
+    <br>
+    <div id="content">
+        <div class="box1"> 
+            
+        </div>
+        <div class="box2">
+                
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function(){
+
+            //accepts more then one class 
+            //$("selector").addClass("class1 class2 ... classn");
+            //Add class
+            $("#btn1").click(function(){
+                $(".box1").addClass("modify");
+                $(".box2").addClass("modify");
+            });
+
+            //Remove class
+            $("#btn2").click(function(){
+                $(".box1").removeClass("modify");
+                $(".box2").removeClass("modify");
+            });
+
+            //Toggle class
+            $("#btn3").click(function(){
+                $(".box1").toggleClass("modify small");
+                $(".box2").toggleClass("modify big");
+            });
+
+            //Change css
+            $("#btn4").click(function(){
+                $(".box1").css("background","black");
+                $(".box2").css("background","yellowgreen");
+            });
+        });
+    </script>
+
+</body>
+</html>

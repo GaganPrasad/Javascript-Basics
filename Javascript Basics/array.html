@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>
+            Array
+        </title>
+        <script type="text/javascript">
+        
+            /*
+                array are dynamic can change at any time
+                array in JS can store different types of variables
+            */
+            
+            //Array declaration 
+            /*
+                var arr1 = new Array("A", "B", "C");
+                //or
+                var arr2;
+                arr2 = new Array("A", "B", "C");
+            */
+            var arr = ["Item1", "Item2", "Item 3", 4];
+            arr.push("Item 5");
+            arr.push("6");
+            for( var i=0; i< arr.length; i++)
+            {
+                document.write(arr[i],"<br>");
+            }
+            arr.pop();
+            arr.pop();
+            document.write("<br> After Pop <br>")
+            for( var i=0; i< arr.length; i++)
+            {
+                document.write(arr[i],"<br>");
+            }
+        </script>
+    </head>
+    <body>
+            
+    </body>
+</html>

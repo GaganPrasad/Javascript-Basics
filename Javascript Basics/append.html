@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery | DOM manipulation</title>
+    <style type="text/css">
+        #btn{
+            text-align: center;
+        }
+        #container{
+            border: 2px solid black;
+            margin: 1em;
+            padding: .5em;
+            text-align: left;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="btn">
+        <button type="button" id="btn1">Perpend</button>
+        <button type="button" id="btn2">Before</button>
+    
+        <button type="button" id="btn3">Append</button>
+        <button type="button" id="btn4">After</button>
+        
+        <button type="button" id="btn6">Empty</button>
+        <button type="button" id="btn5">Remove</button>
+    </div>
+
+    <div id="container">
+        <p class="a">This is 1st paragraph in div</p>
+        <p class="a">This is 2nd paragraph in div</p>
+        <p id="b">This is 3rd paragraph in div</p>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function(){
+
+            //prepend: insert element in the selected element before the content
+            $("#btn1").click(function(){
+                $("#container").prepend("<p> This is prepended paragraph</p>");
+            });
+
+            //before: insert element before the selected element
+            $("#btn2").click(function(){
+                $("#container").before("<p> This is before paragraph</p>");
+            });
+
+            //append: insert element in the selected element after the content
+            $("#btn3").click(function(){
+                $("#container").append("<p> This is append paragraph</p>");
+            });
+
+            //after: insert element after the selected element
+            $("#btn4").click(function(){
+                $("#container").after("<p> This is after paragraph</p>");
+            });
+
+            //empty: removes the content of the element
+            $("#btn6").click(function(){
+                $("#container").empty();
+            });
+
+            //remove: removes the selected element
+            $("#btn5").click(function(){
+                $("#container").remove();
+                //it also accept multiple arguments `
+                //$("p").remove(".a, #b");
+            });
+        });
+    </script>
+</body>
+</html>
